@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav {
+    background-color: #2d3436;
+    display: flex;
+    color: white;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.site-name {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 4px;
+}
+
+.site-name {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 4px;
+}
+  
+.nav a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
