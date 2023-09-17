@@ -2,9 +2,6 @@ import { useState } from 'react';
 import axiosClient from '../config/axios.js';
 import { useToast } from '@chakra-ui/react'
 
-
-const schoolIdValue = "64fdd01a2e35ec424934eb0a";
-
 const useMutation = ({url, method="POST"}) => {
     const toast = useToast();
     const [state, setState] = useState({

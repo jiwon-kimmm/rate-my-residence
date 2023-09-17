@@ -7,6 +7,11 @@ import { userRouter } from './routes/users.js';
 import { reviewsRouter } from './routes/reviews.js';
 import { schoolRouter } from './routes/school.js';
 
+import dotenv from 'dotenv';
+dotenv.config();
+const DB_USER = process.env.DB_USER
+const DB_PASS = process.env.DB_PASS;
+
 const app = express();
 
 app.use(express.json());
@@ -20,7 +25,9 @@ app.use("/auth", userRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/school", schoolRouter);
 
-mongoose.connect("mongodb+srv://jiwonkim1207:4xqm1Ui7zExO4Cq1@ratemyresidence.64kj3xu.mongodb.net/ratemyresidence?retryWrites=true&w=majority",
+
+
+mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASS}@ratemyresidence.64kj3xu.mongodb.net/ratemyresidence?retryWrites=true&w=majority`,
     {
     useNewUrlParser: true,
     useUnifiedTopology: true,

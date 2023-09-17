@@ -32,7 +32,6 @@ router.post('/images', upload.single("image"), async (req, res) => {
             }
         });
 
-        console.log("HIIII");
     } catch (err) {
         res.json(err);
     }
@@ -62,8 +61,7 @@ router.post('/images/:schoolId', upload.single("image"), async (req, res) => {
                 image: `https://universityphotos.s3.amazonaws.com/${key}`
             }
         });
-
-        console.log("HIIII");
+        
     } catch (err) {
         res.json(err);
     }

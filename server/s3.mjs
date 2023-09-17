@@ -3,24 +3,17 @@ AWS.config.update({region:'us-east-2'});
 import { PutObjectCommand, S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner"
 import { v4 as uuid } from "uuid";
- 
-
-const accessKeyId = process.env.AWS_ACCESS_KEY;
-const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-
 
 const s3 = new S3Client({
     region: 'us-east-2'
 });
 
-const BUCKET = process.env.BUCKET;
-const BUCKET_NAME = "universityphotos";
 
-// console.log(`BUCKETTTTT: ${BUCKET}`);
 import dotenv from 'dotenv';
 dotenv.config();
 console.log(`BUCKET: ${process.env.BUCKET}`);
 console.log(`BUCKET REGION: ${process.env.AWS_DEFAULT_REGION}`);
+const BUCKET_NAME = process.env.BUCKET;
 
 
 export const uploadToS3 = async ({file, userId}) => {
